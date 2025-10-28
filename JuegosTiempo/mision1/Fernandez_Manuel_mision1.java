@@ -20,8 +20,8 @@ public class Fernandez_Manuel_mision1 {
 		boolean calibrarPortal = false;
 
 		
-		// 2. No inicializo "day" ni "month" por que no me hacen falta para la condición de ningun proceso
-		// 		- Solo necesito su asignación durante este
+		// 2. No inicializo las variables por que no es necesario por ahora
+		// 		- Solo necesito su asignación durante el proceso
 		//		- Pongo el nombre de las variables en ingles por no poner "ano"
 		int day;
 		int month;
