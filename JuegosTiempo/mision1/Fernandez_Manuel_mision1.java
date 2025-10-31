@@ -107,6 +107,8 @@ public class Fernandez_Manuel_mision1 {
 				// Confirmo si el año es bisiesto
 				if((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
 					bisiesto = true;
+				}else {
+					bisiesto = false;
 				}
 				
 				do {
@@ -182,7 +184,6 @@ public class Fernandez_Manuel_mision1 {
 									
 									¡Salto temporal realizado con exito!\"
 									""");
-							entradaMenu = 0;
 						}else {
 							System.out.println("\"Error: carga temporal insuficiente. Se necesitan al menos 10 crones para abrir el portal.\"");
 						}
@@ -194,7 +195,9 @@ public class Fernandez_Manuel_mision1 {
 				}
 				break;
 			default:
+				if(entradaMenu != 0) {
 					System.out.println("\"Opción no válida. Por favor, selecciona una opción del 0 al 4\"");
+				}
 			}
 
 		} while (entradaMenu != 0);
