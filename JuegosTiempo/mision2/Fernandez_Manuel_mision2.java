@@ -121,9 +121,6 @@ public class Fernandez_Manuel_mision2 {
 					System.out.println("El portal no ha sido calibrado...\n"
 							+ " Numero de intentos máximos (6) alcanzado...\n" + " La grieta temporal ha colapsado");
 				}
-
-				// Otra ayudita para desbugear
-				System.out.println(portalCalibrado + " " + crones + " " + contadorIntentos);
 				break;
 
 			case 2:
@@ -237,10 +234,6 @@ public class Fernandez_Manuel_mision2 {
 				break;
 
 			case 5:
-				/*
-				 * String palabraClaveTemporal = "CRONOS"; String placeholder = "******";
-				 */
-
 				System.out.println("""
 						========================================
 							Descifrar la Clave Temporal
@@ -261,7 +254,6 @@ public class Fernandez_Manuel_mision2 {
 
 					for (int i = 0; i <= palabraClaveTemporal.length() - 1; i++) {
 						if (letra == palabraClaveTemporal.charAt(i)) {
-							System.out.println(letra + " " + palabraClaveTemporal.charAt(i));
 							System.out.println("Letra Correcta!");
 
 							// Sigo la cadena hasta "palabraClaveTemporal.Leght() y no a lenght()-1, por que
@@ -273,7 +265,7 @@ public class Fernandez_Manuel_mision2 {
 					}
 					if (palabraClaveTemporal.equals(placeholder)) {
 						palabraCalibrada = true;
-						System.out.println(palabraCalibrada);
+						break;
 					}
 					
 				}
@@ -283,7 +275,9 @@ public class Fernandez_Manuel_mision2 {
 					System.out.println("Colapso temporal... La palabra era: CRONOS");
 				}
 				if (palabraCalibrada == true) {
-					System.out.println("Descifraste la palabra clave temporal: " + placeholder);
+					// Pongo "placeholder" en vez de "CRONOS" directamente, por si hay algun error que sea visible
+					System.out.println("Has ganado! La palabra era: " + placeholder);
+					crones += 15;
 				}
 
 				break;
