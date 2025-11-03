@@ -8,7 +8,7 @@ public class Fernandez_Manuel_mision1 {
 
 		// Variables para manipulación del menu
 		//		- Uso "default" para recoger cualquier valor no contemplado en el menu
-		int entradaMenu = -1;
+		int entradaMenu;
 		Scanner input = new Scanner(System.in);
 
 		// 1. Variables para valorar estado del portal
@@ -43,25 +43,6 @@ public class Fernandez_Manuel_mision1 {
 			// Uso las """ por que creo que es mejor que poner 8 - System.out.println + los presentes en el resto del ejercicio.
 			// 		- 8 no es un número aleatorio por dramatizar, necesitaría 8 "System.out.println" o multiples "\n"
 			//		- Y no estoy usando una función que no hayas explicado...
-			
-			System.out.println("""
-					---- CENTRO DE CONTROL TEMPORAL ----
-
-					1. Calibrar el Portal
-
-					2. Establecer fecha de viaje
-
-					3. Mostrar la carga temporal acumulada
-
-					4. Iniciar viaje
-
-					0. Salir
-
-					-------------------------------------
-
-					Elige una opción:
-					""");
-			entradaMenu = input.nextInt();
 			
 			switch (entradaMenu) { 
 			case 1:
@@ -137,30 +118,7 @@ public class Fernandez_Manuel_mision1 {
 					 * en el valor introducido y reasigna a "day" el valor "-1" para que continue el "do while"
 					 */
 					
-					switch(month) {
-						
-						// Meses de 30 días
-						case 4,6,9, 11:
-							if(day >= 1 && day <=  30) {
-								break;
-							}
-						
-						// Meses de 31 días
-						case 1, 3, 5, 7, 8, 10, 12:
-							if(day >=  1 && day <= 31) {
-								break;
-							}
-						
-						// Febrero
-						case 2:
-							if(bisiesto == false && (day >= 1 && day <= DIAS_FEBRERO) ||
-								(bisiesto == true && (day >= 1 && day <=  DIAS_FEBRERO+1))){
-								break;
-							}
-						default:
-							System.out.println("\"Las coordenadas son inestables\"");
-							day = -1;
-					}
+
 					
 				}while(day == -1);
 
