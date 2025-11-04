@@ -1,4 +1,4 @@
-package _6_Strings;
+package _6_Strings_2;
 
 public class _8_Buscar_Espacios {
 
