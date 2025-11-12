@@ -39,7 +39,7 @@ public class Fernandez_Manuel_mision2 {
 		int crones = 0;
 
 		// 5.
-		String palabraClaveTemporal = "CRONOS";
+		final String PALABRA_CLAVE_TEMPORAL = "CRONOS";
 		String placeholder;
 		char letra;
 		boolean palabraCalibrada;
@@ -252,18 +252,19 @@ public class Fernandez_Manuel_mision2 {
 					System.in.read();
 					System.in.read();
 
-					for (int i = 0; i <= palabraClaveTemporal.length() - 1; i++) {
-						if (letra == palabraClaveTemporal.charAt(i)) {
+					for (int i = 0; i <= PALABRA_CLAVE_TEMPORAL.length() - 1; i++) {
+						if (letra == PALABRA_CLAVE_TEMPORAL.charAt(i)) {
 							System.out.println("Letra Correcta!");
 
-							// Sigo la cadena hasta "palabraClaveTemporal.Leght() y no a lenght()-1, por que
+							// Sigo la cadena hasta "PALABRA_CLAVE_TEMPORAL.Leght() y no a lenght()-1, por que
 							// el ultimo caracter no se incluye
-							placeholder = placeholder.substring(0, i) + palabraClaveTemporal.charAt(i)
-									+ placeholder.substring(i + 1, palabraClaveTemporal.length());
-
+							placeholder = placeholder.substring(0, i) + PALABRA_CLAVE_TEMPORAL.charAt(i)
+									+ placeholder.substring(i + 1, PALABRA_CLAVE_TEMPORAL.length());
+							
+							contadorIntentos++;
 						}
 					}
-					if (palabraClaveTemporal.equals(placeholder)) {
+					if (PALABRA_CLAVE_TEMPORAL.equals(placeholder)) {
 						palabraCalibrada = true;
 						break;
 					}
@@ -272,7 +273,7 @@ public class Fernandez_Manuel_mision2 {
 
 
 				if (palabraCalibrada == false) {
-					System.out.println("Colapso temporal... La palabra era: CRONOS");
+					System.out.println("Colapso temporal... La palabra era: " + PALABRA_CLAVE_TEMPORAL);
 				}
 				if (palabraCalibrada == true) {
 					// Pongo "placeholder" en vez de "CRONOS" directamente, por si hay algun error que sea visible

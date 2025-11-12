@@ -2,7 +2,7 @@ package __11_Array;
 
 import java.util.Scanner;
 
-public class _8_Paises {
+public class Fernandez_Manuel_8_Paises {
 
 	public static void main(String args[]) {
 		/*

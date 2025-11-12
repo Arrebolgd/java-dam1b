@@ -2,7 +2,7 @@ package __11_Array;
 
 import java.util.Scanner;
 
-public class _9_Nota_Media {
+public class Fernandez_Manuel_9_Nota_Media {
 
 	public static void main(String[] args) {
 		/*

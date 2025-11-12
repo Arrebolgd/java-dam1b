@@ -2,7 +2,7 @@ package __11_Array;
 
 import java.util.Scanner;
 
-public class _7_Lenght_Consola {
+public class Fernandez_Manuel_7_Lenght_Consola {
 
 	public static void main(String args[]) {
 		/*

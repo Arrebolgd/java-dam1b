@@ -1,9 +1,8 @@
 package __11_Array;
 
-public class _11_Varios {
+public class Fernandez_Manuel_11_Varios_Re {
 
-	public static void main(String[] args) {
-
+	public static void main(String args[]) {
 		/*
 		 * Crea un programa en Java en un único fichero en el que esté uno a
 		 * continuación del otro estos ejercicios;
@@ -27,14 +26,19 @@ public class _11_Varios {
 		 */
 
 		int[] array1 = new int[10];
-		int valorArray1 = 100;
+		int valorArray1;
 
 		int[] array2 = new int[20];
-		int valorArray2 = 20;
+		int valorArray2;
 
 		int[] array3 = new int[30];
-		int indiceArray1paraArray3 = 0;
+		int IndiceExtra;
+		int posicion5;
 
+		// Initialize
+		valorArray2 = 20;
+		valorArray1 = 100;
+		
 		for (int i = 0; i <= array2.length - 1; i++) {
 
 			array2[i] = valorArray2;
@@ -45,70 +49,55 @@ public class _11_Varios {
 				valorArray1++;
 			}
 		}
-		for (int i = 0; i <= array3.length - 1; i++) {
-			if (i <= 19) {
-				switch (i) {
-				case 5:
-					array3[i] = array2[i];
-					array2[i] = 99;
-					break;
-				case 6:
-					array3[i] = array2[i];
-					array2[i] = 99;
-					break;
-				case 7:
-					array3[i] = array2[i];
-					array2[i] = 99;
-					break;
-				case 8:
-					array3[i] = array2[i];
-					array2[i] = 99;
-					break;
-				default:
-					array3[i] = array2[i];
-				}
-			}
-			if (i >= 20) {
-				switch (indiceArray1paraArray3) {
-				
-				case 2:
-					
-					break;
-				case 3:
-					
-					break;
-				case 4:
-					
-					break;
-				case 5:
-					
-					break;
-				case 6:
 
-					break;
-				default:
-					array3[i] = array1[indiceArray1paraArray3];
-					indiceArray1paraArray3++;
-				}
+		IndiceExtra = 0;
+		posicion5 = 0;
+		
+		for (int i = 0; i <= array3.length - 1; i++) {
+			if (i <= 19)
+				array3[i] = array2[i];
+
+			if (i >= 20) {
+				array3[i] = array1[IndiceExtra];
+				IndiceExtra++;
 			}
-			if (array3[i] == 5) {
-				System.out.println("El numero 5 esta en la posición: " + i);
+			if (array3[i] == 5)
+				posicion5 = i;
+		}
+		
+		IndiceExtra = 0;
+		
+		for (int i = 0; i <= array2.length - 1; i++) {
+			
+			switch (i) {
+			case 2, 3, 4:
+				array1[i] = array2[IndiceExtra];
+				IndiceExtra++;
+				break;
+			case 5, 6, 7, 8:
+				array2[i] = 99;
+				array1[i] = array2[i];
+				break;
 			}
 		}
 
+		System.out.println("· La posición es la " + posicion5);
+
+		System.out.print("· Array1: ");
 		for (int i : array1)
 			System.out.print(i + " ");
 
 		System.out.print("\n");
 
+		System.out.print("· Array2: ");
 		for (int i : array2)
 			System.out.print(i + " ");
 
 		System.out.print("\n");
 
+		System.out.print("· Array3: ");
 		for (int i : array3)
 			System.out.print(i + " ");
 
 	}
-
 }

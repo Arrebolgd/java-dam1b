@@ -2,7 +2,7 @@ package __11_Array;
 
 import java.util.Scanner;
 
-public class _6_Maximo_Minimo {
+public class Fernandez_Manuel_6_Maximo_Minimo {
 
 	public static void main(String args[]) {
 		/*

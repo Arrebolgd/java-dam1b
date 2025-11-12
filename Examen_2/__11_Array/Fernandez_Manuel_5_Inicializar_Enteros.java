@@ -1,6 +1,6 @@
 package __11_Array;
 
-public class _5_Inicializar_Enteros {
+public class Fernandez_Manuel_5_Inicializar_Enteros {
 
 	public static void main(String[] args) {
 		/*

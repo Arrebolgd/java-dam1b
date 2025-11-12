@@ -2,7 +2,7 @@ package __11_Array;
 
 import java.util.Scanner;
 
-public class _10_Array_Capicua {
+public class Fernandez_Manuel_10_Array_Capicua {
 
 	public static void main(String[] args) {
 		/*
@@ -15,18 +15,14 @@ public class _10_Array_Capicua {
 		Scanner input = new Scanner(System.in);
 		int[] elArray = new int[10];
 		int indiceInverso = elArray.length-1;
-		boolean capicua = false;
+		boolean capicua = true;
 		
 		for(int i = 0; i <= elArray.length-1; i++) {
 			System.out.println("· Introduce el nº " + (i + 1) + ": ");
 			elArray[i] = input.nextInt();
 		}
 		
-		for(int i: elArray) {
-			if(i == elArray[indiceInverso]) {
-				capicua = true;
-			}
-			
+		for(int i: elArray) {			
 			if(i != elArray[indiceInverso]) {
 				capicua = false;
 				break;
@@ -35,6 +31,7 @@ public class _10_Array_Capicua {
 		}
 		System.out.println("· El array es capicua? " + capicua);
 		input.close();
+		
 	}
 
 }
