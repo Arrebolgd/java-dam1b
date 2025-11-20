@@ -33,6 +33,7 @@ public class _9_Diagrama_Barras {
 			System.out.print("\n");
 			mes++;
 		}
+		input.close();
 	}
 
 }
